@@ -1,4 +1,5 @@
 let invalidDate = false;
+let firstTimeEntered = true;
 
 window.addEventListener("load", () => {
     const day = document.getElementById('day');
@@ -29,7 +30,7 @@ window.addEventListener("load", () => {
 function checkDate(dayValue, monthValue, yearValue) {
     const dateIsValid = isValidDate(dayValue, monthValue, yearValue);
 
-    if (!dateIsValid) {
+    if (!dateIsValid && !firstTimeEntered) {
         const dayResult = document.getElementById('day-result');
         const monthResult = document.getElementById('month-result');
         const yearResult = document.getElementById('year-result');
@@ -78,6 +79,7 @@ function calculate(date) {
 
     invalidDate = false;
     errorElem.classList.add('hidden');
+    firstTimeEntered = false;
 }
 
 function isValidDate(day, month, year) {
