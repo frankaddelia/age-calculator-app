@@ -13,23 +13,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
 
   <link href="./dist/styles/styles.css" rel="stylesheet" type="text/css" />
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { 
-      bottom: 0;
-      font-size: 11px;
-      left: 50%;
-      position: absolute;
-      text-align: center;
-      transform: translateX(-50%);
-    }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="./dist/js/age-calculator.js"></script>
 </head>
 <body>
 
   <main class="main">
+    <div id="error" class="error hidden">
+      Date is invalid!
+    </div>
     <div class="form">
       <div id="day" class="form-element">
         <label for="day" class="form-label">Day</label>
@@ -52,9 +43,9 @@
     </div>
 
     <div class="results">
-      <div class="result"><span class="result-value">--</span> years</div>
-      <div class="result"><span class="result-value">--</span> months</div>
-      <div class="result"><span class="result-value">--</span> days</div>
+      <div class="result"><span id="year-result" class="result-value">--</span> years</div>
+      <div class="result"><span id="month-result" class="result-value">--</span> months</div>
+      <div class="result"><span id="day-result" class="result-value">--</span> days</div>
     </div>
     
   </main>
